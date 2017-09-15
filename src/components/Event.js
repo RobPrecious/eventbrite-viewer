@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
+import './Event.css';
+
 
 class Event extends Component {
   constructor() {
@@ -17,11 +20,23 @@ class Event extends Component {
   render() {
     const event = this.props.event;
     return (
-      <div>
+      <div className="event">
         <div className="event-header" onClick={this.eventClicked} >
-          {event.name.text}
+
+          <div className="col-md-4 event-img-container">
+            <img className="event-img" src={event.logo.original.url} alt="Event Logo" />
+          </div>
+          <div className="event-primary-info">
+            <span className="event-start"> {moment(event.start.utc).format('llll')}</span>
+            <span className="event-name"> {event.name.text}</span>
+            <span className="event-expand"><i className={this.state.open ? " fa fa-minus" : "fa fa-plus"} aria-hidden="true"></i></span>
+          </div>
         </div>
-        {this.state.open ? event.description.text : ''}
+
+        <div className={this.state.open ? "event-info" : "hide"}>
+          <span className="event-description-title">Description</span>
+          {this.state.open ? event.description.text : ''}
+        </div>
       </div>
     );
   }

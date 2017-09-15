@@ -1,0 +1,51 @@
+.hide {
+  visibility: false;
+}
+.event {
+  margin-bottom: 10px; 
+}
+
+.event-header {
+    display: flex;
+    background: white;
+    width: 70%;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.event-info {
+    display: block;
+    width: 70%;
+    padding: 5px;
+    margin: 0 auto;
+    background: #fff;
+    
+}
+.event-img-container{
+  padding-left: 0px; 
+}
+.event-img {
+  height: 90px;
+  width:90px;
+}
+
+.event-name {
+  display: block;
+  font-weight: bolder;
+}
+.event-start, .event-description-title{
+  display: block;
+  font-weight: lighter;
+}
+.event-primary-info{
+  width: 100%
+}
+
+.event-expand {
+  float: right;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.event-expand i {
+  color: lightgrey
+}
