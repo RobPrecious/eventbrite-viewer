@@ -13,7 +13,7 @@ class Event extends Component {
     this.eventClicked = this.eventClicked.bind(this);
   }
   eventClicked(e) {
-    e.preventDefault();
+    // e.preventDefault();
     this.setState({ open: !this.state.open });
   }
 
@@ -30,6 +30,7 @@ class Event extends Component {
             <span className="event-start"> {moment(event.start.utc).format('llll')}</span>
             <span className="event-name"> {event.name.text}</span>
             <span className="event-expand"><i className={this.state.open ? " fa fa-minus" : "fa fa-plus"} aria-hidden="true"></i></span>
+            <a className="event-ext-page" href={event.vanity_url} target="_blank"> Visit EventBrite Page <i className="fa fa-external-link" aria-hidden="true"></i></a>
           </div>
         </div>
 
