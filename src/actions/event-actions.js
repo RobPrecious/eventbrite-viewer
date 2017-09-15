@@ -6,7 +6,9 @@ export function fetchEvents() {
   let url = 'https://www.eventbriteapi.com/v3/events/search/?token=VBUSKKCQ2VTXKPOP34PX';
 
   return (dispatch) => {
-    dispatch({ type: types.FETCH_EVENT_IN_PROGRESS })
+
+    dispatch({ type: types.FETCH_EVENT_IN_PROGRESS });
+
     axios.get(url)
       .then((response) => {
         dispatch({
@@ -19,7 +21,6 @@ export function fetchEvents() {
           type: types.FETCH_EVENT_FAILED,
           error: response
         })
-      }
-      )
+      })
   }
 }; 

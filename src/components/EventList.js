@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Event from './Event';
+
+import spinner from './Spinner.gif';
 
 const EventList = ({ events }) => {
   if (events && events.length > 0) {
@@ -12,8 +15,10 @@ const EventList = ({ events }) => {
   }
   else {
     return (
-      <div>
-        No Events
+      <div className="no-events-notice">
+        Loading...
+        <img src={spinner} className="spinner" alt="logo" />
+
       </div>
     )
   }

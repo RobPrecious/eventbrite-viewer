@@ -1,6 +1,19 @@
 .hide {
   visibility: false;
 }
+
+.no-events-notice{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 21px;
+}
+
+.spinner {
+  margin: 0 auto;
+  display: block;
+  height: 100px;
+}
+
 .event {
   margin: 10px auto;
   width: 70%;
@@ -34,6 +47,7 @@
   display: block;
   font-weight: lighter;
 }
+
 .event-primary-info{
   width: 100%
 }
@@ -49,8 +63,8 @@
 
 @media screen and (max-width: 700px) {
   .event {
-      width: 95%;
-      margin: 10px;
+    width: 95%;
+    margin: 10px;
   }
 
 }

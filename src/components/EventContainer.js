@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
 import { connect } from 'react-redux';
+
 import EventList from './EventList';
 
 function mapStateToProps(state) {
@@ -11,8 +13,6 @@ function mapStateToProps(state) {
 
 class EventContainer extends Component {
   render() {
-    console.log(this.props);
-
     return (
       <div>
         <EventList events={this.props.events} />
@@ -24,7 +24,5 @@ class EventContainer extends Component {
 EventContainer.propTypes = {
   events: PropTypes.array.isRequired,
 };
-
-
 
 export default connect(mapStateToProps)(EventContainer);
