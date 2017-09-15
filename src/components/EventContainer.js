@@ -16,7 +16,6 @@ class EventContainer extends Component {
     return (
       <div>
         <EventList events={this.props.events} />
-        {this.props.events.length}
       </div>
     );
   }
